@@ -9,3 +9,10 @@ up:
 
 down:
 	@docker compose down
+
+init:
+	@$(MAKE) frontend.init
+
+# Frontend
+frontend.init:
+	@docker compose run --rm frontend su node -c "npm ci"

@@ -1,6 +1,6 @@
 FROM node:20.9-bookworm
 
-WORKDIR /work
+WORKDIR /work/src/frontend
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends locales vim git unzip && \
@@ -15,4 +15,4 @@ RUN chmod +x /usr/local/bin/docker-entrypoint-override.sh
 
 ENTRYPOINT [ "/usr/local/bin/docker-entrypoint-override.sh" ]
 
-CMD [ "node" ]
+CMD [ "su", "node", "-c", "npm run dev" ]
