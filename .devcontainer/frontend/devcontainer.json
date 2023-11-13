@@ -1,0 +1,25 @@
+{
+  "name": "frontend",
+  "dockerComposeFile": [
+    "../../compose.yaml"
+  ],
+  "service": "frontend",
+  "shutdownAction": "none",
+  "workspaceFolder": "/work",
+  "remoteUser": "node",
+  "postStartCommand": "git config --global --add safe.directory /work",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "extensions": [
+        "oderwat.indent-rainbow",
+        "EditorConfig.EditorConfig",
+        "mhutchie.git-graph",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
+}

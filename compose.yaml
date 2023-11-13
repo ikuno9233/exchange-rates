@@ -1,0 +1,15 @@
+services:
+  frontend:
+    build:
+      context: ./containers/frontend
+      dockerfile: dockerfile
+    env_file:
+      - ./containers/frontend/env_file
+    environment:
+      - GID=${GID}
+      - UID=${UID}
+    volumes:
+      - .:/work
+    init: true
+    tty: true
+    stdin_open: true
