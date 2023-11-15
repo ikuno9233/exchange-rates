@@ -9,7 +9,7 @@ RUN apt-get update && \
     locale-gen ja_JP.UTF-8 && \
     localedef -f UTF-8 -i ja_JP ja_JP.UTF-8
 
-COPY ./docker-entrypoint-override.sh /usr/local/bin/docker-entrypoint-override.sh
+COPY ./develop/docker-entrypoint-override.sh /usr/local/bin/docker-entrypoint-override.sh
 
 RUN chmod +x /usr/local/bin/docker-entrypoint-override.sh
 

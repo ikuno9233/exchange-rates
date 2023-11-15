@@ -2,7 +2,7 @@ services:
   frontend:
     build:
       context: ./containers/frontend
-      dockerfile: dockerfile
+      dockerfile: dockerfile.develop
     env_file:
       - ./containers/frontend/env_file
     environment:

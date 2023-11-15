@@ -1,0 +1,14 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: ./containers/frontend/dockerfile.production
+    env_file:
+      - ./containers/frontend/env_file
+    ports:
+      - 80:80
+    volumes:
+      - frontend_src:/work
+
+volumes:
+  frontend_src:
