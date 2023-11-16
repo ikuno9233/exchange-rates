@@ -26,10 +26,12 @@ endif
 .PHONY: init.develop
 init.develop:
 	@$(MAKE) frontend.init.develop
+	@$(MAKE) down
 
 .PHONY: init.production
 init.production:
 	@$(MAKE) frontend.init.production
+	@$(MAKE) down
 
 # Frontend
 .PHONY: frontend.init.develop
